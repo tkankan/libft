@@ -6,11 +6,10 @@
 /*   By: tkankan <tkankan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 14:16:18 by tkankan           #+#    #+#             */
-/*   Updated: 2022/02/19 14:28:05 by tkankan          ###   ########.fr       */
+/*   Updated: 2022/02/21 04:45:10 by tkankan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include "limits.h"
 
 int	ft_atoi(const char *str)
 {
@@ -21,8 +20,7 @@ int	ft_atoi(const char *str)
 	result = 0;
 	negative = 1;
 	i = 0;
-	while ((str[i] >= '\t' && str[i] <= '\r')
-		|| str[i] == ' ')
+	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
@@ -32,21 +30,17 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (i > INT_MAX)
-		{
-			return (0);
-		}
-		if (i < INT_MIN)
-		{
-			return (0);
-		}
 		result = (str[i] - '0') + (result * 10);
+		if (result > 2147483647)
+			return (-1);
+		if (result < -2147483648)
+			return (0);
 		i++;
 	}
 	return (result * negative);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -63,4 +57,4 @@ int main () {
    printf("Yazı değer = %s, Sayı değer = %d\n", str, val);
 
    return(0);
-}
+}*/

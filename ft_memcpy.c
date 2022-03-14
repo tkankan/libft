@@ -6,7 +6,7 @@
 /*   By: tkankan <tkankan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 11:05:35 by tkankan           #+#    #+#             */
-/*   Updated: 2022/02/07 11:20:27 by tkankan          ###   ########.fr       */
+/*   Updated: 2022/03/04 14:40:40 by tkankan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+/*
+src ile işaret edilen nesnenin n karakterini dst ile işaret edilen
+nesneye kopyalar. Elde edilen nesneyi işaret eden bir pointer
+gönderilir.
+*/

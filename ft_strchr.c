@@ -6,7 +6,7 @@
 /*   By: tkankan <tkankan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:13:52 by tkankan           #+#    #+#             */
-/*   Updated: 2022/02/16 16:13:55 by tkankan          ###   ########.fr       */
+/*   Updated: 2022/03/01 18:36:01 by tkankan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != (char)c)
-		if (*s++ == '\0')
-			return (NULL);
-	return ((char *)s);
+	while (*s != '\0' && (char)c != *s)
+	s++;
+	if ((char)c == *s)
+		return ((char *)s);
+	return (0);
 }

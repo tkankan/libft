@@ -6,7 +6,7 @@
 /*   By: tkankan <tkankan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 03:57:41 by tkankan           #+#    #+#             */
-/*   Updated: 2022/02/21 03:57:42 by tkankan          ###   ########.fr       */
+/*   Updated: 2022/03/04 14:43:10 by tkankan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (&((unsigned char *)s)[index]);
 }
+
+/*
+s ile işaretlenen nesnenin ilk n karakterinde, c nin ilk
+göründüğü yeri belirler (unsigned char a dönüştürerek).
+Eğer c bulunursa, nesnedeki c ye bir pointer gönderilir. Aksi
+halde 0 gönderilir.
+*/

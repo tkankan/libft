@@ -6,7 +6,7 @@
 /*   By: tkankan <tkankan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 18:35:33 by tkankan           #+#    #+#             */
-/*   Updated: 2022/02/23 18:47:21 by tkankan          ###   ########.fr       */
+/*   Updated: 2022/03/01 15:58:41 by tkankan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,3 +87,20 @@ char	**ft_split(char const *s, char c)
 	ft_split_words (res, s, c, word_ct);
 	return (res);
 }
+
+/*
+#include "stdio.h"
+
+int		main(void)
+{
+	int i = 0;
+	char **tab;
+		
+	tab = ft_split("Cagri, abim, libft, meister", ',');
+	while (i < 4)
+	{
+		printf("string %d : %s\n", i, tab[i]);
+		i++;
+	}
+	return (0);
+}*/
